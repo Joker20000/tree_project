@@ -1,0 +1,97 @@
+.tree>.tree_node{
+    position: relative;
+    width: 375px;
+    background-color: rgb(222,235,247);
+    overflow: hidden;
+}
+.value{
+    position: absolute;
+    right: 20px;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    position: relative;
+    padding: 5px 0;
+    white-space: nowrap;
+}
+li:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:-200px;
+    display: block;
+    width: calc(100% + 200px);
+    height: 1px;
+    border-top: 1px solid #fff;
+}
+input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.value{
+    text-align: right;
+}
+.key{
+    text-align: left;
+}
+.button{
+    width: 15px;
+    display: none;
+}
+.del{
+    margin-right: 5px;
+    display: none;
+}
+.print{
+    text-align: center;
+    margin-top: 10px;
+}
+input[type="checkbox"]{
+    vertical-align: middle;
+    margin-right: 5px;
+}
+input:checked~.button, input:checked~.del{
+    display: inline-block;
+}
+.popup_bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 9;
+}
+.input_box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: white;
+    border-radius: 8px;
+}
+.input_box .title{
+    padding: 10px 0;
+    text-align: center;
+}
+.input_box .key_input, .input_box .val_input{
+    margin: 10px;
+}
+.input_box input{
+    border-bottom: 1px solid #ababab;
+    text-align: center;
+}
+.input_box span{
+    display: inline-block;
+    width: 80px;
+}
+.input_box .btn{
+    margin: 20px 0 10px;
+    display: flex;
+    justify-content: space-around;
+}
